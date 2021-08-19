@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="941.0" styleClass="base_pane" stylesheets="@CascadeStyleSheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Multiplayer.Sudoku.GUI.MPController">
+   <children>
+      <Canvas fx:id="canvas" height="450.0" layoutX="14.0" layoutY="15.0" onMouseClicked="#canvasMouseClicked" width="450.0" />
+      <Button fx:id="button_1" layoutX="546.0" layoutY="119.0" mnemonicParsing="false" onMouseClicked="#press1" prefHeight="36.0" prefWidth="42.0" stylesheets="@CascadeStyleSheet.css" text="1" />
+      <Button fx:id="button_2" layoutX="597.0" layoutY="119.0" mnemonicParsing="false" onMouseClicked="#press2" prefHeight="36.0" prefWidth="42.0" stylesheets="@CascadeStyleSheet.css" text="2" />
+      <Button fx:id="button_3" layoutX="646.0" layoutY="119.0" mnemonicParsing="false" onMouseClicked="#press3" prefHeight="36.0" prefWidth="42.0" stylesheets="@CascadeStyleSheet.css" text="3" />
+      <Button fx:id="button_4" layoutX="546.0" layoutY="168.0" mnemonicParsing="false" onMouseClicked="#press4" prefHeight="36.0" prefWidth="42.0" stylesheets="@CascadeStyleSheet.css" text="4" />
+      <Button fx:id="button_5" layoutX="597.0" layoutY="168.0" mnemonicParsing="false" onMouseClicked="#press5" prefHeight="36.0" prefWidth="42.0" stylesheets="@CascadeStyleSheet.css" text="5" />
+      <Button fx:id="button_6" layoutX="646.0" layoutY="168.0" mnemonicParsing="false" onMouseClicked="#press6" prefHeight="36.0" prefWidth="42.0" stylesheets="@CascadeStyleSheet.css" text="6" />
+      <Button fx:id="button_7" layoutX="546.0" layoutY="222.0" mnemonicParsing="false" onMouseClicked="#press7" prefHeight="36.0" prefWidth="42.0" stylesheets="@CascadeStyleSheet.css" text="7" />
+      <Button fx:id="button_8" layoutX="597.0" layoutY="222.0" mnemonicParsing="false" onMouseClicked="#press8" prefHeight="36.0" prefWidth="42.0" stylesheets="@CascadeStyleSheet.css" text="8" />
+      <Button fx:id="button_9" layoutX="646.0" layoutY="222.0" mnemonicParsing="false" onMouseClicked="#press9" prefHeight="36.0" prefWidth="42.0" stylesheets="@CascadeStyleSheet.css" text="9" />
+      <Button fx:id="erase" layoutX="546.0" layoutY="271.0" mnemonicParsing="false" onMouseClicked="#pressErase" prefHeight="42.0" prefWidth="142.0" text="Erase" />
+      <Label layoutX="464.0" layoutY="366.0" prefHeight="49.0" prefWidth="78.0" text="   Difficulty">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label fx:id="playerName" layoutX="546.0" layoutY="26.0" prefHeight="18.0" prefWidth="132.0" text="Player's name...">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Label layoutX="464.0" layoutY="80.0" prefHeight="18.0" prefWidth="78.0" text="   Time taken">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <ProgressBar fx:id="progressBar" layoutX="546.0" layoutY="79.0" prefHeight="20.0" prefWidth="142.0" progress="0.0" />
+      <Button fx:id="newGame" layoutX="546.0" layoutY="414.0" mnemonicParsing="false" onMouseClicked="#pressNewGame" prefHeight="42.0" prefWidth="142.0" text="New game!" />
+      <TitledPane animated="false" layoutX="719.0" layoutY="78.0" prefHeight="385.0" prefWidth="202.0" text="Your teammates">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="426.0" prefWidth="200.0">
+               <children>
+                  <RadioButton fx:id="rb1" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="176.0" text="...">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="rb2" layoutX="14.0" layoutY="47.0" mnemonicParsing="false" text="...">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font></RadioButton>
+                  <RadioButton fx:id="rb3" layoutX="14.0" layoutY="83.0" mnemonicParsing="false" text="...">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font></RadioButton>
+                  <RadioButton fx:id="rb4" layoutX="14.0" layoutY="119.0" mnemonicParsing="false" text="...">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font></RadioButton>
+               </children></AnchorPane>
+        </content>
+      </TitledPane>
+      <Accordion />
+      <Button fx:id="endTurn" layoutX="546.0" layoutY="329.0" mnemonicParsing="false" onMouseClicked="#pressEndTurn" prefHeight="36.0" prefWidth="142.0" text="End turn" />
+      <Label fx:id="whosTurn" layoutX="546.0" layoutY="54.0" prefHeight="18.0" prefWidth="164.0" text="Good luck have fun">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="noti" layoutX="719.0" layoutY="35.0" prefHeight="28.0" prefWidth="202.0" text="Waiting for other players..." />
+      <Label layoutX="760.0" layoutY="8.0" prefHeight="28.0" prefWidth="132.0" text="Game board status">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="diffLevel" layoutX="598.0" layoutY="382.0" prefHeight="18.0" prefWidth="78.0">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="377.0" prefWidth="190.0" styleClass="base_pane" stylesheets="@CascadeStyleSheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Multiplayer.Sudoku.GUI.loginController">
+   <children>
+      <Canvas fx:id="canvas1" height="331.0" layoutX="14.0" layoutY="21.0" width="162.0" />
+      <Canvas fx:id="canvas" height="411.0" layoutX="14.0" layoutY="15.0" width="162.0" />
+      <Label layoutX="29.0" layoutY="15.0" prefHeight="64.0" prefWidth="132.0" text="Multiplayer Sudoku." textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font></Label>
+      <Button fx:id="login" layoutX="40.0" layoutY="195.0" mnemonicParsing="false" onAction="#loginPress" onMouseClicked="#loginPress" prefHeight="33.0" prefWidth="111.0" text="Login" />
+      <Accordion />
+      <Label layoutX="14.0" layoutY="51.0" prefHeight="56.0" prefWidth="170.0" text="__________" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="39.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="240.0" prefHeight="56.0" prefWidth="170.0" text="__________" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="39.0" />
+         </font>
+      </Label>
+      <Label layoutX="15.0" layoutY="117.0" text="Username:">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameEntry" layoutX="10.0" layoutY="139.0" prefHeight="33.0" prefWidth="170.0" />
+      <Button fx:id="exit" layoutX="40.0" layoutY="310.0" mnemonicParsing="false" onAction="#exitPress" onMouseClicked="#exitPress" prefHeight="42.0" prefWidth="111.0" text="Exit" />
+      <Label fx:id="userPassLabel" layoutX="15.0" layoutY="250.0" prefHeight="17.0" prefWidth="155.0" text=" " textAlignment="CENTER" textFill="#f20303">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

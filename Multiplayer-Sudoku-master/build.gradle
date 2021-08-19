@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+repositories {
+    jcenter()
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:28.1-jre'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'info.picocli:picocli:4.3.2'
+    testImplementation 'junit:junit:4.12'
+    implementation 'org.mariadb.jdbc:mariadb-java-client:2.1.2'
+}
+
+javafx {
+    version = "13"
+    modules = [ 'javafx.controls', 'javafx.fxml' ]
+}
+
+task runOldServer(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    standardInput = System.in
+    main = "Multiplayer.Sudoku.Net.ThreadedServer"
+}
+
+task runServer(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    standardInput = System.in
+    main = "Multiplayer.Sudoku.CLI.Server"
+}
+
+task runClient(type: JavaExec) {
+    classpath sourceSets.main.runtimeClasspath
+    standardInput = System.in
+    main = "Multiplayer.Sudoku.CLI.Client"
+}
+
+mainClassName = "Multiplayer.Sudoku.GUI.MultiplayerSudoku"

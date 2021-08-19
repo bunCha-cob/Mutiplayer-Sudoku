@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="695.0" styleClass="base_pane" stylesheets="@CascadeStyleSheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Multiplayer.Sudoku.GUI.lobbyController">
+   <children>
+      <Canvas fx:id="canvas" height="450.0" layoutX="14.0" layoutY="15.0" width="450.0" />
+      <Button fx:id="create_lobby" layoutX="546.0" layoutY="74.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="111.0" stylesheets="@CascadeStyleSheet.css" text="Create Lobby" />
+      <Button fx:id="delete_lobby" layoutX="546.0" layoutY="124.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="111.0" text="Delete Lobby" />
+      <Label layoutX="264.0" layoutY="48.0" prefHeight="18.0" prefWidth="132.0" text="Players In Lobby:">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Button fx:id="exit" layoutX="546.0" layoutY="402.0" mnemonicParsing="false" onAction="#exitPress" onMouseClicked="#exitPress" prefHeight="42.0" prefWidth="111.0" text="Exit" />
+      <Accordion />
+      <Button fx:id="join_lobby" layoutX="546.0" layoutY="176.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="111.0" text="Join Lobby" />
+      <Label layoutX="47.0" layoutY="48.0" prefHeight="18.0" prefWidth="132.0" text="Lobbies:">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <ListView fx:id="lobbies" layoutX="39.0" layoutY="74.0" onMouseClicked="#handleMouseClick" prefHeight="370.0" prefWidth="200.0" />
+      <ListView fx:id="playersInLobby" layoutX="252.0" layoutY="74.0" prefHeight="370.0" prefWidth="249.0" />
+   </children>
+</Pane>
